@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'spina'
 gem 'foreman'
+gem 'kramdown-parser-gfm'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
