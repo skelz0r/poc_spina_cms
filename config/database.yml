@@ -1,0 +1,26 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+local: &local
+  host: <%= ENV.fetch('DATABASE_HOST') { 'localhost' } %>
+  username: poc_spina_cms
+  password: password
+
+development:
+  <<: *default
+  <<: *local
+  database: poc_spina_cms_development
+
+test:
+  <<: *default
+  <<: *local
+  database: poc_spina_cms_test
+
+production:
+  <<: *default
+  database: poc_spina_cms_production
+  username: poc_spina_cms
+  password: <%= ENV['OFFICIAL_DOCUMENTS_CHECKER_DATABASE_PASSWORD'] %>
