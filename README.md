@@ -18,5 +18,11 @@ rails db:schema:load
 ## Development
 
 ```sh
-rails s
+foreman start -f  Procfile.dev
 ```
+
+=> [http://localhost:5000/](http://localhost:5000/)
+
+## Admin for CMS
+
+Development: [http://localhost:5000/admin](http://localhost:5000/admin)
