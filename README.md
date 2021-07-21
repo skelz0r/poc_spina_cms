@@ -26,3 +26,18 @@ foreman start -f  Procfile.dev
 ## Admin for CMS
 
 Development: [http://localhost:5000/admin](http://localhost:5000/admin)
+
+## Demo
+
+Run:
+
+```sh
+DUMMY=true rails db:seed
+```
+
+Visit `/admin` with following credentials:
+
+- email: loic.delmaire@beta.gouv.fr
+- password: password
+
+Visit `Documentation` tab, and create/edit pages.
